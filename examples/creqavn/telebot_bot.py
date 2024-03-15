@@ -6,6 +6,7 @@
 import os
 
 import telebot
+#from telebot import TeleBot
 
 text_messages = {
     'welcome':
@@ -31,7 +32,7 @@ text_messages = {
 if "TELEBOT_BOT_TOKEN" not in os.environ or "GROUP_CHAT_ID" not in os.environ:
     raise AssertionError("Please configure TELEBOT_BOT_TOKEN and GROUP_CHAT_ID as environment variables")
 
-bot = telebot.AsyncTeleBot(os.environ["TELEBOT_BOT_TOKEN"])
+bot = telebot.TeleBot(os.environ["TELEBOT_BOT_TOKEN"])
 GROUP_CHAT_ID = int(os.environ["GROUP_CHAT_ID"])
 
 

@@ -1,7 +1,9 @@
+import os
 import telebot
 
 
-bot = telebot.TeleBot('TOKEN')
+#bot = telebot.TeleBot('TOKEN')
+bot = telebot.TeleBot(os.environ["TELEBOT_BOT_TOKEN"])
 
 @bot.chat_join_request_handler()
 def make_some(message: telebot.types.ChatJoinRequest):

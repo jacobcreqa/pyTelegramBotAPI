@@ -1,7 +1,8 @@
+import os
 import telebot
 from telebot import types,util
 
-bot = telebot.TeleBot("token")
+bot = telebot.TeleBot(os.environ["TELEBOT_BOT_TOKEN"])
 
 #chat_member_handler. When status changes, telegram gives update. check status from old_chat_member and new_chat_member.
 @bot.chat_member_handler()
